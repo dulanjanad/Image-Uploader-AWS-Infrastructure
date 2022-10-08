@@ -1,0 +1,19 @@
+steps:
+  - label: ":hammer: Pull Code From Git"
+    command: echo "Code Pulled From Git"
+  
+  - label: ":terraform: Terraform Plan"
+    commands:
+     - terraform init
+     - terraform plan
+    key: terraform-plan-phase
+    
+  - block: "Approval"
+    prompt: "Changes will be made to AWS Resources"
+    fields:
+    - text: "Approve"
+      key: "approval"
+  
+  - label: ":rocket: Terraform Apply"
+    command: terraform apply -auto-approve
+    key: terraform-apply-phase
