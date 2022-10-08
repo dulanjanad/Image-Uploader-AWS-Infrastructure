@@ -42,7 +42,7 @@ resource "null_resource" "provisioner" {
       type        = "ssh"
       user        = "ec2-user"
       host        = aws_instance.worker_nodes.public_ip
-      private_key = file("./id_rsa")
+      private_key = file("/home/ec2-user/id_rsa")
     }
 
   }
