@@ -15,5 +15,7 @@ steps:
       key: "approval"
   
   - label: ":rocket: Terraform Apply"
-    command: terraform apply -auto-approve
+    commands:
+      - terraform init 
+      - terraform apply -auto-approve
     key: terraform-apply-phase
