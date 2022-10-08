@@ -17,7 +17,7 @@ resource "aws_instance" "worker_nodes" {
 resource "null_resource" "provisioner" {
 
   depends_on = [
-    aws_instance.worker_nodes,aws_efs_file_system.efs
+    aws_instance.worker_nodes, aws_efs_file_system.efs
   ]
 
   provisioner "remote-exec" {

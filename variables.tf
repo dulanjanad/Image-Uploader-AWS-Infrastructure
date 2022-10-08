@@ -29,7 +29,7 @@ variable "nodes_count" {
 }
 
 variable "redhat_ami" {
-  default = "ami-035c5dc086849b5de"
+  default     = "ami-035c5dc086849b5de"
   type        = string
   description = "Red Hat AMI"
 }
@@ -40,6 +40,6 @@ variable "environment" {
 }
 
 variable "efs_name" {
-    type = string
-    description = "EFS Name"
+  type        = string
+  description = "EFS Name"
 }

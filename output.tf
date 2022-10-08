@@ -11,9 +11,9 @@ output "worker_nodes_private_ip" {
 }
 
 output "efs_dns" {
-    value = aws_efs_file_system.efs.dns_name
+  value = aws_efs_file_system.efs.dns_name
 }
 
 output "ecr_url" {
-    value = aws_ecr_repository.image-uploader-ecr.repository_url
+  value = aws_ecr_repository.image-uploader-ecr.repository_url
 }
